@@ -8,11 +8,11 @@ const initialState ={
     }]
 }
 
-const productReducer = (state=initialState, action)=>{
+const productReducer = (state=initialState, {type, products})=>{
 
-    switch(action.type){
+    switch(type){
         case ActionTypes.SET_PRODUCTS:
-            return state;        
+            return {...state, products};        
         default : 
             return state;
     }
