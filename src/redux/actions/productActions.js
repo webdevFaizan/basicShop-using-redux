@@ -1,14 +1,15 @@
 import { ActionTypes } from "../constants/action-type"
 
-
-export const setProducts =(products) =>{
+//The actions functions always return an object and this will define what action should be taken and also what kind of payload is to be sent.
+export const setProducts =(product) =>{
+    // console.log(product);
     return {
         type : ActionTypes.SET_PRODUCTS,
-        products : products,
+        payload : product,
     };
 }
 
-export const selectedProducts =(product) =>{
+export const selectedProduct =(product) =>{
     return {
         type : ActionTypes.SELECTED_PRODUCTS,
         payload : product,
