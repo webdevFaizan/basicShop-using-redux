@@ -11,9 +11,9 @@ const ProductComponent = () => {
         <div className="four wide column" key={id}>
           <Link to={`/product/${id}`}>
             <div className="ui link cards">
-              <div className="card">
-                <div className="image">
-                  <img src={image} alt={title} />
+              <div className="card" style={{minHeight : 500, display: 'flex'}}>
+                <div className="image" style={{backgroundColor: 'white'}} >
+                  <img src={image} style={{height : 299, objectFit: 'contain'}} alt={title} />
                 </div>
                 <div className="content">
                   <div className="header">{title}</div>
