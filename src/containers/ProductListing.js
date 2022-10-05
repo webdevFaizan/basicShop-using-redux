@@ -23,7 +23,7 @@ const ProductListing = () =>{
         const jsonData = await response.json();
         // console.log(jsonData);
         dispatch(setProducts(jsonData));    //In order for us to add this data that we received into the store, we need to dispatch an action, this action will consist of action type and payload that will ultimately update the redux store.
-        console.log(products);
+        // console.log(products);
         // IMPORTANT and DOUBT : There is something interesting that I noticed here, if we are consoling the value of products here, this is not showing the final result, but when the same useSelector hook is used in the productComponent.js file this is going us a correct result.
         // The main doubt here is that, since the dispatch method runs only after the await call, which simply means the answer should be 
     };
